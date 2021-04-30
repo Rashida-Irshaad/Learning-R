@@ -1,2 +1,4 @@
 # Learning-R
-Alhamdulillah.
+print("Alhamdulillah")
+print("good")
+
