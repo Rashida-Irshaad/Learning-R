@@ -133,4 +133,86 @@ while(z >= 3 && z <= 10) {
           z <- z -1
      }
 }
+my_data = data.frame(x = rnorm(100),y = rnorm(50))
+sd(x)
+sd(x=x)
+myd = rnorm(100)
+sd(x=myd)
+sd(x = myd,na.rm = FALSE)
+sd(na.rm = FALSE,x=myd)
+args(lm)
+my_data <- data.frame(x = rnorm(30),y = rnorm(30))
+lm(y ~ x, my_data, model = FALSE)
+lm(data = my_data ,y ~ x,model = FALSE,1:100)
+f = function(a,b = 1,c = 1,d = NULL)
+f <- function(a,b){
+        a^2
+}       
+f(2)
+f <- function(a,b)
+        {print(a)
+        print(b)
+        
+}        
+f(45)
+
+f <- function(a=78,b=13)
+{print(a)
+        print(b)
+        
+}        
+
+
+f(b = 45)
+f <- function(a=78,b=13)
+{print(a)
+        print(b)
+        
+}        
+
+f(0,5)
+f <- function(a=78,b=13)
+{print(a)
+        print(b)
+        
+}        
+
+f(0)
+f <- function(a=78,b=13,c = NULL)
+{print(a)
+        print(b)
+        print(c)
+        
+}        
+
+f(,3,7)
+f <- function(a=78,b=13,c = NULL)
+{print(a)
+        print(b)
+        print(c)
+        
+}        
+
+f(,7)
+x <- 1:4 ; y <- 6:9
+x +y
+x > 2
+x >= 2
+y == 8
+x * y
+x / y
+x <- 1:5; y <- 6:9
+x/y
+5 / 6
+x <- 1:6; y <- 6:9
+x / y
+6 / 7
+rep(10,5)
+rep(10,6)
+x <- matrix(1:4,2,2);y <- matrix(rep(10,4),2,2)
+x
+y
+x %*% y
+x * y
+x / y
 
