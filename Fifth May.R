@@ -215,4 +215,36 @@ y
 x %*% y
 x * y
 x / y
+as.Date('11-11-13')
+as.POSIXct('11-11-13')
+as.POSIXlt('11-11-13')
+x <- Sys.time()
+x
+p <- as.POSIXct(x)
+p
+x$sec # it will give an error.after applying POXISlt it will be fine.
+p <- as.POSIXlt(x)
+p
+
+names(unclass(p))
+p$sec
+p$mon
+p$wday
+datestring <- c ('January 11,2012 10:30','March 15,2011 11:11')
+x <- strptime(datestring,'%B %d,%Y %H:%M')
+x
+class(x)
+x <- as.Date('2012-1-1')
+y <- strptime('9 jan 2011 1:34:21','%d %b %y %H:%M:%S')
+x-y # it will give an error after applying POSIX it will be fine
+class(x)
+class(y)
+x <- as.POSIXlt(x)
+x-y
+x <- as.Date('2012-1-1')
+y <- as.Date('2011-2-28')
+x-y
+x <- as.POSIXct('2012-10-25 1:0:0')
+y <- as.POSIXct('2012-10-25 6:0:0',tz = 'GMT')
+y - x
 
