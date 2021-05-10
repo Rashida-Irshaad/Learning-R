@@ -149,3 +149,28 @@ tapply(x,f,quantile)
 tapply(x,f,mean,simplify = FALSE)
 rnorm(10)
 rnorm(10)
+x <- c(rnorm(10),runif(10),rnorm(10,1))
+x
+f <- gl(3,10)
+split(x,f)
+lapply(split(x,f),mean)
+?airquality
+library(datasets)
+head(airquality)
+s <- split(airquality,airquality$Month)
+s
+head(s$`5`)
+head(s$`8`)
+table(airquality$Month)
+?lapply
+fc <- function(x)colSums(x[,c('Ozone','Solar.R','Wind')])
+lapply(s,function(x)colSums(x[,c('Ozone','Solar.R','Wind')]))
+lapply(s,fc)
+sfc <- function(x)colMeans(x[,c('Ozone','Solar.R','Wind')],na.rm= TRUE)
+sfc
+sapply(s,function(x) colMeans(x[,c('Ozone','Solar.R','Wind')],na.rm = TRUE))
+sapply(s,sfc)
+sfc <- function(x)
+     {
+     colMeans(x[,c('Ozone','Solar.R','Wind')],na.rm= TRUE)
+     } # it can be like this.
